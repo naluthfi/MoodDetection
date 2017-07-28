@@ -15,7 +15,7 @@ int main(int argc, const char** argv)
 	//use haarcascade_frontalface_alt.xml library
 	face_cascade.load("haarcascade_frontalface_alt.xml");
 
-	//setup Video Capture device
+	//setup Video Capture device and link it to the first capture device
 	VideoCapture captureDevice;
 	captureDevice.open(0);
 
@@ -26,7 +26,7 @@ int main(int argc, const char** argv)
 	//create a window to present the results
 	namedWindow("outputCapture", 1);
 
-	//create a loop to captureand find faces
+	//create a loop to capture and find faces
 	while(true)
 	{
 		//capture a new image frame
@@ -40,7 +40,7 @@ int main(int argc, const char** argv)
 		std::vector<Rect> faces;
 
 		//find faces and store them in the vector array
-		face_cascade.detectMultiScale(grayscaleFrame, faces, 1.1,3,CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_SCALE_IMAGE, Size(30,30));
+		face_cascade.detectMultiScale(grayscaleFrame, faces, 1.1, 3 ,CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_SCALE_IMAGE, Size(30,30));
 
 		//draw a rectangle for all found faces in the vector array on original image
 		for (int i=0;i<faces.size();i++)
@@ -48,7 +48,7 @@ int main(int argc, const char** argv)
 			Point pt1(faces[i].x +  faces[i].width, faces[i].y + faces[i].height);
 			Point pt2(faces[i].x, faces[i].y);
 
-			rectangle(captureFrame, pt1, pt2, cvScalar(0, 255,0 ,0), 1, 8, 0);
+			rectangle(captureFrame, pt1, pt2, cvScalar(0, 255, 0, 0), 1, 8, 0);
 		}
 
 		//print output

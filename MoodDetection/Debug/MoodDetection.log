@@ -1,4 +1,4 @@
-﻿Build started 07/14/17 6:53:53 PM.
+﻿Build started 07/21/17 12:24:47 PM.
      1>Project "C:\Users\LUTHFI\documents\visual studio 2010\Projects\MoodDetection\MoodDetection\MoodDetection.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\MoodDetection.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -24,4 +24,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.71
+Time Elapsed 00:00:03.86
