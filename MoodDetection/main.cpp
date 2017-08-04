@@ -51,7 +51,7 @@ int main(int argc, const char** argv)
 		face_cascade.detectMultiScale(grayscaleFrame, faces, 1.1, 3 , CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_SCALE_IMAGE, Size(30,30));
 
 		//find eyes and store them in the vector array
-		eyes_cascade.detectMultiScale(grayscaleFrame, eyes, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_SCALE_IMAGE, Size(10,10));
+		eyes_cascade.detectMultiScale(grayscaleFrame, eyes, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_SCALE_IMAGE, Size(15,15));
 
 		//draw a rectangle for all found faces in the vector array on original image
 		for (int i=0;i<faces.size();i++)
